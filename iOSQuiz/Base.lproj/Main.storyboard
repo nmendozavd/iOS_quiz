@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--iOS Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="iOS Quiz" id="BYZ-38-t0r" customClass="ViewController" customModule="iOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waD-dF-9mm">
+                                <rect key="frame" x="20" y="88" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LqV-w8-VZZ"/>
+                                    <constraint firstAttribute="width" constant="90" id="UDy-RG-2E3"/>
+                                </constraints>
+                                <state key="normal" title="Answer"/>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ONw-7X-2d7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knk-XY-BZI">
+                                <rect key="frame" x="339" y="87" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="1VO-dQ-9pu"/>
+                                    <constraint firstAttribute="height" constant="30" id="SAG-eM-Eay"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k77-qz-U7o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auu-qL-xfW">
+                                <rect key="frame" x="20" y="299" width="375" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="EDV-Vn-hlR"/>
+                                    <constraint firstAttribute="width" constant="375" id="wWh-ZB-VcJ"/>
+                                </constraints>
+                                <string key="text">Create the user interface. As we create the UI, we will get better understanding of our application. Then we breathe life into our application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first step to iOS development?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZf-RI-sMA">
+                                <rect key="frame" x="46" y="20" width="322" height="20.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="Ll2-8Y-cBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Knk-XY-BZI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="5uY-IH-jUn"/>
+                            <constraint firstItem="auu-qL-xfW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-9.5" id="65x-aK-rHA"/>
+                            <constraint firstItem="waD-dF-9mm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jqk-FQ-KhN"/>
+                            <constraint firstItem="auu-qL-xfW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fc4-tk-H6j"/>
+                            <constraint firstItem="mZf-RI-sMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="iKT-zJ-p3x"/>
+                            <constraint firstItem="waD-dF-9mm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="ixY-M0-oyu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Knk-XY-BZI" secondAttribute="trailing" constant="20" id="sEL-w7-fge"/>
+                            <constraint firstItem="mZf-RI-sMA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w4d-Ek-SoK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mZf-RI-sMA" secondAttribute="trailing" constant="46" id="zhP-iO-nVK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="auu-qL-xfW" id="NNe-nJ-8Se"/>
+                        <outlet property="questionLabel" destination="mZf-RI-sMA" id="dfG-ZF-hGl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="69.293478260869577"/>
         </scene>
     </scenes>
 </document>
